@@ -1,4 +1,5 @@
-DOWNLOAD
+<strong>DOWNLOAD</strong>
+
 You can download Pysen from github by typing
 git clone git://github.com/EllinorBergman/ProjektPysen.git
 
@@ -6,7 +7,7 @@ or as a zip from
 https://github.com/EllinorBergman/ProjektPysen
 
 
-INSTALLING
+<strong>INSTALLING</strong>
 
 First of all you have to create the site/data folder, either manually or trough github by typing
 cd Projekt; mkdir site/data
@@ -20,7 +21,7 @@ There are also some modules that needs to be installed, you do that easily by po
 
 When that is done you can log in by either root/root or doe/doe.
 
-CUSTOMIZATION
+<strong>CUSTOMIZATION</strong>
 
 SITE TITLE/FOOTER: Open the root/site/config file and scroll down to the information at the bottom and change it to your preferred information.
 
@@ -39,7 +40,7 @@ CHANGING THEMES: Go into root/site/config and change the line ‘parent' => ‘t
 CHANGING THE START PAGE: To change the start page you have to go into root/src/CCIndex and change the index.tpl.php and the sidebar.tpl.php.
 
 
-ADD BLOG POST / PAGE
+<strong>ADD BLOG POST / PAGE</strong>
 
 To add a blog post all you have to do is go to content/create through the webpage and fill in the information. To make it a post you specify the Type as Post. If you want it to be a page you have to type Page instead. 
 
