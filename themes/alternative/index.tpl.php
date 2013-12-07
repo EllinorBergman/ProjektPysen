@@ -17,7 +17,10 @@
         <ul class="login">
           <?=login_menu()?>
         </ul>
-        <h3 class="text-muted"><a href="<?=base_url()?>"><?=$header?></a></h3>
+        <h3 class="text-muted">
+            <img id='site-logo' src='<?=theme_url($logo)?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' />
+          
+          <a href="<?=base_url()?>"><?=$header?></a></h3>
       </div>
       
       <hr>
@@ -37,7 +40,6 @@
 
 
       <div class="footer">
-        <p>Pysen &copy; Ellinor Bergman</p>
         <p><?=render_views('footer')?><?=$footer?><?=get_tools()?><?=get_debug()?></p>
       </div>
 

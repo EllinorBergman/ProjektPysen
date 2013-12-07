@@ -13,8 +13,10 @@
   
       <div class="container">
         
-          
-          <div class="site-title"><a href="<?=base_url()?>"><?=$header?></a></div>
+         
+          <div class="site-title">
+            <img id='site-logo' src='<?=theme_url($logo)?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' />
+            <a href="<?=base_url()?>"><?=$header?></a></div>
 
         <div class="navbar-collapse collapse">
           <ul class="navbar">

@@ -131,7 +131,6 @@ $py->config['menus'] = array(
     'home'      => array('label'=>'About Me', 'url'=>'my'),
     'blog'      => array('label'=>'My Blog', 'url'=>'my/blog'),
     'guestbook' => array('label'=>'Guestbook', 'url'=>'my/guestbook'),
-    'page' => array('label'=>'Page', 'url'=>'page/view/5'),
   ),
 );
 
@@ -174,7 +173,10 @@ $py->config['theme'] = array(
   'menu_to_region' => array('my-navbar'=>'navbar'),
   'data' => array(
     'header' => 'Pysen',
+    'logo' => 'logo.png',
+    'logo_width'  => 40,
+    'logo_height' => 40,
     'favicon' => 'favicon.ico',
-    'footer' => '<p>Footer information</p>',
+    'footer' => '<p></p>',
   ),
 );
