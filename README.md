@@ -10,10 +10,10 @@ https://github.com/EllinorBergman/ProjektPysen
 <strong>INSTALLING</strong>
 
 First of all you have to create the site/data folder, either manually or trough github by typing
-cd Projekt; mkdir site/data
+mkdir site/data
 
 Secondly you have to make it writable, either manually in your sftp program (e.g. FileZilla), or type
-cd Projekt; chmod 777 site/data
+chmod 777 site/data
 
 You also have to change your RewriteBase, in the .htaccess in the main directory, to the right path.
 
