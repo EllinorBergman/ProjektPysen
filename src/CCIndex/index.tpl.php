@@ -4,15 +4,15 @@
 <h2>Download</h2>
 <p>You can download Pysen from github.</p>
 <blockquote>
-<code>git clone git://github.com/EllinorBergman/pysen_kmom07.git</code>
+<code>git clone git://github.com/EllinorBergman/ProjektPysen.git</code>
 </blockquote>
-<p>You can review its source directly on github: <a href='https://github.com/EllinorBergman/pysen_kmom07'>https://github.com/EllinorBergman/pysen_kmom07</a></p>
+<p>You can review its source directly on github: <a href='https://github.com/EllinorBergman/ProjektPysen'>https://github.com/EllinorBergman/ProjektPysen</a></p>
 
 <h2>Installation</h2>
 <p>First you have to make the data-directory writable. This is the place where Pysen needs
 to be able to write and create files.</p>
 <blockquote>
-<code>cd pysen; mkdir site/data</code><br /><br />
+<code>cd ProjektPysen; mkdir site/data</code><br /><br />
 <code>chmod 777 site/data</code>
 </blockquote>
 
