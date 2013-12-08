@@ -23,21 +23,29 @@ When that is done you can log in by either root/root or doe/doe.
 
 <strong>CUSTOMIZATION</strong>
 
-SITE TITLE/FOOTER: Open the root/site/config file and scroll down to the information at the bottom and change it to your preferred information. If you want to remove/edit tools in the footer, you need to open root/themes/function.php, and change the information in the first function.
+<em>Site title/Footer</em>
+Open the root/site/config file and scroll down to the information at the bottom and change it to your preferred information. If you want to remove/edit tools in the footer, you need to open root/themes/function.php, and change the information in the first function.
 
-FAVICON: To change the favicon you need to either name it favicon.ico and save it in root/site/themes/mytheme, or if you prefer to name it something else, go in to root/site/config and change the filename.
+<em>Favicon</em>
+To change the favicon you need to either name it favicon.ico and save it in root/site/themes/mytheme, or if you prefer to name it something else, go in to root/site/config and change the filename.
 
-DEBUG INFORMATION: If you would like to remove the debug information you can change it from true to false in the root/site/config file.
+<em>Debug information</em> 
+If you would like to remove the debug information you can change it from true to false in the root/site/config file.
 
-ADDING CONTROLLER: To add a controller, open root/site/config and change the controllers array.
+<em>Adding Controller</em> 
+To add a controller, open root/site/config and change the controllers array.
 
-ADDING MENU: Go to the my-navbar array in root/site/config and create a new array. By default the menu links to a about page, blog, and a guestbook.
+<em>Adding menu</em> 
+Go to the my-navbar array in root/site/config and create a new array. By default the menu links to a about page, blog, and a guestbook.
 
-CHANGING CSS: To change the style of the page you have to go into you site/themes/mytheme and add you custom css.
+<em>Changing the Stylesheet</em> 
+To change the style of the page you have to go into you site/themes/mytheme and add you custom css.
 
-CHANGING THEMES: Go into root/site/config and change the line ‘parent' => ‘themes/grid', to ‘parent' => ‘themes/alternative. You also have to go into the site/themes/mytheme/style.css and change the first line to the correct theme. By default there are two different themes called Grid and Alternative.
+<em>Switching between themes</em> 
+Go into root/site/config and change the line ‘parent' => ‘themes/grid', to ‘parent' => ‘themes/alternative. You also have to go into the site/themes/mytheme/style.css and change the first line to the correct theme. By default there are two different themes called Grid and Alternative.
 
-CHANGING THE START PAGE: To change the start page you have to go into root/src/CCIndex and change the index.tpl.php and the sidebar.tpl.php.
+<em>Changing the start page</em> 
+To change the start page you have to go into root/src/CCIndex and change the index.tpl.php and the sidebar.tpl.php.
 
 
 <strong>ADD BLOG POST / PAGE</strong>
