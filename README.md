@@ -23,7 +23,7 @@ When that is done you can log in by either root/root or doe/doe.
 
 <strong>CUSTOMIZATION</strong>
 
-SITE TITLE/FOOTER: Open the root/site/config file and scroll down to the information at the bottom and change it to your preferred information.
+SITE TITLE/FOOTER: Open the root/site/config file and scroll down to the information at the bottom and change it to your preferred information. If you want to remove/edit tools in the footer, you need to open root/themes/function.php, and change the information in the first function.
 
 FAVICON: To change the favicon you need to either name it favicon.ico and save it in root/site/themes/mytheme, or if you prefer to name it something else, go in to root/site/config and change the filename.
 
