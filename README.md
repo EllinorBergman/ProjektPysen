@@ -23,28 +23,28 @@ When that is done you can log in by either root/root or doe/doe.
 
 <strong>CUSTOMIZATION</strong>
 
-<em>Site title/Footer</em>
+<em>Site title/Footer</em><br />
 Open the root/site/config file and scroll down to the information at the bottom and change it to your preferred information. If you want to remove/edit tools in the footer, you need to open root/themes/function.php, and change the information in the first function.
 
-<em>Favicon</em>
+<em>Favicon</em><br />
 To change the favicon you need to either name it favicon.ico and save it in root/site/themes/mytheme, or if you prefer to name it something else, go in to root/site/config and change the filename.
 
-<em>Debug information</em> 
+<em>Debug information</em> <br />
 If you would like to remove the debug information you can change it from true to false in the root/site/config file.
 
-<em>Adding Controller</em> 
+<em>Adding Controller</em> <br />
 To add a controller, open root/site/config and change the controllers array.
 
-<em>Adding menu</em> 
+<em>Adding menu</em> <br />
 Go to the my-navbar array in root/site/config and create a new array. By default the menu links to a about page, blog, and a guestbook.
 
-<em>Changing the Stylesheet</em> 
+<em>Changing the Stylesheet</em> <br />
 To change the style of the page you have to go into you site/themes/mytheme and add you custom css.
 
-<em>Switching between themes</em> 
+<em>Switching between themes</em> <br />
 Go into root/site/config and change the line ‘parent' => ‘themes/grid', to ‘parent' => ‘themes/alternative. You also have to go into the site/themes/mytheme/style.css and change the first line to the correct theme. By default there are two different themes called Grid and Alternative.
 
-<em>Changing the start page</em> 
+<em>Changing the start page</em> <br />
 To change the start page you have to go into root/src/CCIndex and change the index.tpl.php and the sidebar.tpl.php.
 
 
