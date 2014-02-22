@@ -15,14 +15,14 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
   /**
    * Constructor
    */
-  public function __construct($py=null) {
-    parent::__construct($py);
+  public function __construct($ct=null) {
+    parent::__construct($ct);
     $profile = $this->session->GetAuthenticatedUser();
     $this->profile = is_null($profile) ? array() : $profile;
     $this['isAuthenticated'] = is_null($profile) ? false : true;
-    if(!$this['isAuthenticated']) {
-      $this['id'] = 1;
-      $this['acronym'] = 'anonomous';      
+    if (!$this['isAuthenticated']) {
+    	$this['id'] = 1;
+    	$this['acronym'] = 'unknown';
     }
   }
 
@@ -76,8 +76,8 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
       break;
     }
   }
-  
-      
+
+
   /**
    * Implementing interface IHasSQL. Encapsulate all SQL used by this class.
    *
@@ -184,7 +184,7 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
    */
   public function CreatePassword($plain, $algorithm=null) {
     $password = array(
-      'algorithm'=>($algorithm ? $algoritm : CPysen::Instance()->config['hashing_algorithm']),
+      'algorithm'=>($algorithm ? $algorithm : CPysen::Instance()->config['hashing_algorithm']),
       'salt'=>null
     );
     switch($password['algorithm']) {
@@ -240,38 +240,8 @@ class CMUser extends CObject implements IHasSQL, ArrayAccess, IModule {
    */
   public function ChangePassword($plain) {
     $password = $this->CreatePassword($plain);
-    $this->db->ExecuteQuery(self::SQL('update password'), array($password['algoritm'], $password['salt'], $password['password'], $this['id']));
+    $this->db->ExecuteQuery(self::SQL('update password'), array($password['algorithm'], $password['salt'], $password['password'], $this['id']));
     return $this->db->RowCount() === 1;
-  }
-  
-      /**
-   * Init the database and create appropriate tables.
-   */
-  public function Init() {
-    try {
-      $this->db->ExecuteQuery(self::SQL('drop table user2group'));
-      $this->db->ExecuteQuery(self::SQL('drop table group'));
-      $this->db->ExecuteQuery(self::SQL('drop table user'));
-      $this->db->ExecuteQuery(self::SQL('create table user'));
-      $this->db->ExecuteQuery(self::SQL('create table group'));
-      $this->db->ExecuteQuery(self::SQL('create table user2group'));
-      $password = $this->CreatePassword('root');
-      $this->db->ExecuteQuery(self::SQL('insert into user'), array('root', 'The Administrator', 'root@dbwebb.se', $password['algorithm'], $password['salt'], $password['password']));
-      $idRootUser = $this->db->LastInsertId();
-      $password = $this->CreatePassword('doe');
-      $this->db->ExecuteQuery(self::SQL('insert into user'), array('doe', 'John/Jane Doe', 'doe@dbwebb.se', $password['algorithm'], $password['salt'], $password['password']));
-      $idDoeUser = $this->db->LastInsertId();
-      $this->db->ExecuteQuery(self::SQL('insert into group'), array('admin', 'The Administrator Group'));
-      $idAdminGroup = $this->db->LastInsertId();
-      $this->db->ExecuteQuery(self::SQL('insert into group'), array('user', 'The User Group'));
-      $idUserGroup = $this->db->LastInsertId();
-      $this->db->ExecuteQuery(self::SQL('insert into user2group'), array($idRootUser, $idAdminGroup));
-      $this->db->ExecuteQuery(self::SQL('insert into user2group'), array($idRootUser, $idUserGroup));
-      $this->db->ExecuteQuery(self::SQL('insert into user2group'), array($idDoeUser, $idUserGroup));
-      $this->AddMessage('success', 'Successfully created the database tables and created a default admin user as root:root and an ordinary user as doe:doe.');
-    } catch(Exception$e) {
-      die("$e<br/>Failed to open database: " . $this->config['database'][0]['dsn']);
-    }
   }
   
   
